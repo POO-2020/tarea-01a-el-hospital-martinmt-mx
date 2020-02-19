@@ -1,4 +1,5 @@
 import Fecha from "./Fecha.js"
+import Tiempo from "./Tiempo.js"
 class Main{
     probarAño(){
         let fecha1 = new Fecha(19,4,2024)
@@ -25,6 +26,11 @@ class Main{
         let fecha1 = new Fecha(19,2,2022)
         console.log(fecha1.getDiaFecha())
     }
+    probarTiempo(){
+        let tiempo = new Tiempo(11, 32, "pm")
+        console.log(tiempo.getFormato12())
+        console.log(tiempo.getFormato24())
+    }
 }
 let app = new Main()
 app.probarAño()
@@ -33,3 +39,4 @@ app.probarSemanas()
 app.probarDias()
 app.probarFecha()
 app.probarDiaFecha()
+app.probarTiempo()
