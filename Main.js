@@ -3,6 +3,7 @@ import Tiempo from "./Tiempo.js"
 import Nombre from "./Nombre.js"
 import Paciente from "./Paciente.js"
 import Doctor from "./Doctor.js"
+import Cita from "./Cita.js"
 class Main{
     probarFecha(){
         let fecha1 = new Fecha(12,4,2022)
@@ -32,6 +33,10 @@ class Main{
         let doctor = new Doctor("JLM19", "Cirujano", new Nombre("Juan", "López", "Méndez"), 3213339999)
         console.log(doctor.getPerfil())
     }
+    probarCita(){
+        let cita1 = new Cita(new Fecha(3,4,2020), new Tiempo(3,30,"pm"), new Doctor("JLM19", "Cirujano", new Nombre("Juan", "López", "Méndez"), 3213339999), new Paciente(new Nombre("Martin", "Mojica", "Torres"), new Fecha(3,4,2001), 3122739451))
+        console.log(cita1.getPerfil())
+    }
 }
 let app = new Main()
 app.probarFecha()
@@ -39,3 +44,4 @@ app.probarTiempo()
 app.probarNombre()
 app.probarPaciente()
 app.probarDoctor()
+app.probarCita()
