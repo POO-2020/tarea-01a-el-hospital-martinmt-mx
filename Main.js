@@ -7,7 +7,7 @@ import Cita from "./Cita.js"
 import Hospital from "./Hospital.js"
 class Main{
     constructor() {
-        this.hospital = new Hospital("Hospital", "De los enfermos");
+        this.hospital = new Hospital("Hospital", "IMSS");
     }
     probarFecha(){
         let fecha1 = new Fecha(12,4,2022)
@@ -44,24 +44,20 @@ class Main{
 
     
     agregarDoctor() {
-        let doctor1 = new Doctor(new Nombre("Ernesto", "Pérez", "Rodríguez"),"Oftalmología",3135649512,98653212);
-        let doctor2 = new Doctor(new Nombre("Pedro", "Ramírez", "Juárez"),"Dermatología",3123154898,56258456);
-        let doctor3 = new Doctor(new Nombre("José", "Dominguez", "Figueroa"),"Urología",3123566868,63124556);
+        let doctor1 = new Doctor("LPL19", "Cirujano", new Nombre("Luis", "Pérez", "Lopez"),3124556366)
+        let doctor2 = new Doctor("BIM19", "Pediatra", new Nombre("Braulio", "I", "Madero"),3125436644)
+        let doctor3 = new Doctor("YFB19", "Ginecologo", new Nombre("Yovanha", "Fajardo", "Borjas"), 3127548433)
     
-        this.hospital.registrarDoctor(doctor1);
-        this.hospital.registrarDoctor(doctor2);
-        this.hospital.registrarDoctor(doctor3);
-        this.hospital.listarDoctores();
+        this.hospital.registrarDoctor(doctor1)
+        this.hospital.registrarDoctor(doctor2)
+        this.hospital.registrarDoctor(doctor3)
+        this.hospital.listarDoctores()
     }
     
     agregarCita() {
-        let cita1 = new Cita(
-          new Fecha(5, 4, 2020),
-          new Tiempo(5, 40, "PM"),
-          new Doctor(new Nombre("Pedro", "Ramírez", "Juárez"),"Dermatología",3123154898,56258456),
-          new Paciente(new Nombre("Juan", "Solorio", "Mendoza"),new Fecha(5, 6, 2000),3124567855));
-        this.hospital.registrarCita(cita1);
-        this.hospital.listarCitas();
+        let cita1 = new Cita(new Fecha(24,2,2021), new Tiempo(4,40,"pm"), new Doctor("LPL19", "Cirujano", new Nombre("Luis", "Pérez", "Lopez"),3124556366), new Paciente(new Nombre("Martin", "Mojica", "Torres"), new Fecha(3,4,2001), 3122739451))
+        this.hospital.registrarCita(cita1)
+        this.hospital.listarCitas()
     }
 }
 let app = new Main()
@@ -71,5 +67,5 @@ app.probarNombre()
 app.probarPaciente()
 app.probarDoctor()
 app.probarCita()
-app.agregarDoctor();
-app.agregarCita();
+app.agregarDoctor()
+app.agregarCita()

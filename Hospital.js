@@ -7,7 +7,7 @@ import Cita from "./Cita.js"
 export default class Hospital{
     /**
      * 
-     * @param {string} nombre 
+     * @param {Nombre} nombre 
      * @param {string} direccion
      * @param {Doctor} doctores
      * @param {Cita} citas
@@ -30,12 +30,12 @@ export default class Hospital{
     }
 
     registrarCita(cita){
-        this.doctores.push(cita)
+        this.citas.push(cita)
     }
 
-    litarCitas(){
+    listarCitas(){
         this.citas.forEach((cita, i) => {
-            console.log(`${i} ${doctor.getPerfil()}`)
+            console.log(`${i} ${cita.getPerfil()}`)
         })
     }
 }
