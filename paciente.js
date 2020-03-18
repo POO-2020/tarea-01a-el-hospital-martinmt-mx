@@ -1,5 +1,5 @@
-import Nombre from "./Nombre.js"
-import Fecha from "./Fecha.js";
+import Nombre from "./nombre.js"
+import Fecha from "./fecha.js";
 
 export default class Paciente{
     /**
