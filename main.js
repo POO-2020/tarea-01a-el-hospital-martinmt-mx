@@ -1,10 +1,10 @@
-import Fecha from "./Fecha.js"
-import Tiempo from "./Tiempo.js"
-import Nombre from "./Nombre.js"
-import Paciente from "./Paciente.js"
-import Doctor from "./Doctor.js"
-import Cita from "./Cita.js"
-import Hospital from "./Hospital.js"
+import Fecha from "./fecha.js"
+import Tiempo from "./tiempo.js"
+import Nombre from "./nombre.js"
+import Paciente from "./paciente.js"
+import Doctor from "./doctor.js"
+import Cita from "./cita.js"
+import Hospital from "./hospital.js"
 class Main{
     constructor() {
         this.hospital = new Hospital("Hospital", "IMSS");
